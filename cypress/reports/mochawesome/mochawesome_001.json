@@ -1,0 +1,105 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2026-06-02T12:56:09.364Z",
+    "end": "2026-06-02T12:56:09.552Z",
+    "duration": 188,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "6f5ad51d-5579-4379-a899-004915b9a788",
+      "title": "",
+      "fullFile": "cypress\\e2e\\Pokeapi\\berry_2.cy.js",
+      "file": "cypress\\e2e\\Pokeapi\\berry_2.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "b2ef5200-b6f6-4a4e-9384-b43f9894f615",
+          "title": "PokeAPI - Berry 2 Tests",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Berry 2 validations",
+              "fullTitle": "PokeAPI - Berry 2 Tests Berry 2 validations",
+              "timedOut": null,
+              "duration": 170,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.request('https://pokeapi.co/api/v2/berry/2').then(response => {\n  expect(response.status).to.eq(200);\n  expect(response.body.firmness.name).to.eq('super-hard');\n});\ncy.request('https://pokeapi.co/api/v2/berry/1').then(response1 => {\n  cy.request('https://pokeapi.co/api/v2/berry/2').then(response2 => {\n    expect(response2.body.size).to.be.greaterThan(response1.body.size);\n    expect(response2.body.soil_dryness).to.eq(response1.body.soil_dryness);\n  });\n});",
+              "err": {},
+              "uuid": "f3419c00-aeeb-4feb-b487-1c1deae9a62e",
+              "parentUUID": "b2ef5200-b6f6-4a4e-9384-b43f9894f615",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "f3419c00-aeeb-4feb-b487-1c1deae9a62e"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 170,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.4"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports/mochawesome",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.3.2"
+    }
+  }
+}

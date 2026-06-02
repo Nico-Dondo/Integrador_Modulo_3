@@ -1,0 +1,105 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2026-06-02T12:56:11.848Z",
+    "end": "2026-06-02T12:56:12.034Z",
+    "duration": 186,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "697f52ba-5174-4fa7-b1cd-de7cd8e9bddc",
+      "title": "",
+      "fullFile": "cypress\\e2e\\Pokeapi\\pikachu.cy.js",
+      "file": "cypress\\e2e\\Pokeapi\\pikachu.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "692c395d-0c88-406a-a932-ee64b566d242",
+          "title": "PokeAPI - Pikachu",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Validaciones Pikachu",
+              "fullTitle": "PokeAPI - Pikachu Validaciones Pikachu",
+              "timedOut": null,
+              "duration": 156,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.request('https://pokeapi.co/api/v2/pokemon/pikachu/').then(response => {\n  expect(response.status).to.eq(200);\n  expect(response.body.base_experience).to.be.greaterThan(10).and.lessThan(1000);\n  const types = response.body.types.map(t => t.type.name);\n  expect(types).to.include('electric');\n});",
+              "err": {},
+              "uuid": "a8072681-604a-48e3-b3c4-5757baa0690d",
+              "parentUUID": "692c395d-0c88-406a-a932-ee64b566d242",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "a8072681-604a-48e3-b3c4-5757baa0690d"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 156,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.4"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports/mochawesome",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.3.2"
+    }
+  }
+}
